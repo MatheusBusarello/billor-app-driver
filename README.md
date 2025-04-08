@@ -13,7 +13,7 @@ A mobile application developed in **React Native with Firebase**, focused on loa
 - Image upload (from gallery or camera)  
 - Real-time chat with support
 - Profile with name, password, and photo editing
-- Notificações Push (Firebase Cloud Messaging)
+- Push Notifications (Firebase Cloud Messaging)
 
 ---
 
