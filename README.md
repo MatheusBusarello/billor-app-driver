@@ -1,89 +1,94 @@
-# BillorApp Driver
+BillorApp Driver
+Aplicativo mobile desenvolvido em React Native com Firebase, focado no gerenciamento de cargas, envio de comprovantes e comunicação com suporte em tempo real.
 
-Aplicativo mobile desenvolvido em **React Native com Firebase**, focado no gerenciamento de cargas, envio de comprovantes e comunicação com suporte em tempo real.
+📱 Funcionalidades
+Autenticação por e-mail e senha (Firebase Auth)
 
----
+Tela inicial com:
 
-## Funcionalidades
+Registro de saída e chegada de cargas
 
-- Autenticação por e-mail e senha (Firebase Auth)
-- Tela inicial com:
-  - Registro de saída e chegada de cargas
-  - Histórico de entregas
-- Envio de imagem (galeria ou câmera)
-- Chat em tempo real com suporte
-- Perfil com alteração de nome, senha e foto
-- Notificações Push (Firebase Cloud Messaging)
+Histórico de entregas com imagens
 
----
+Envio de imagens (galeria ou câmera)
 
-## Como executar o projeto
+Chat em tempo real com o suporte
 
-### 1. Clone o repositório
+Perfil com edição de nome, senha e foto
 
-```bash
+Notificações Push (Firebase Cloud Messaging)
+
+🚀 Como executar o projeto
+1. Clone o repositório
+bash
+Copy
+Edit
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
-
-### 2. Instale as dependências
-
+2. Instale as dependências
+nginx
+Copy
+Edit
 npm install
+3. Configure as variáveis de ambiente
+Crie um arquivo .env na raiz do projeto com a seguinte variável:
 
-### 3. Crie um arquivo .env na raiz com a chave do Google
-
+ini
+Copy
+Edit
 GOOGLE_MAPS_API_KEY=SUA_CHAVE
+Você pode obter essa chave criando um projeto no Google Cloud Console.
 
-Para você conseguir sua chave é necessário criar no google cloud
+4. Configure o Firebase
+O arquivo src/config/firebase.ts está ignorado no repositório por segurança. Para configurá-lo:
 
-### 4. Configuração do Firebase
+Renomeie o arquivo firebase.example.ts para firebase.ts
 
-O arquivo src/config/firebase.ts está ignorado no repositório por segurança. Crie-o manualmente renomeando o firebase.example para firebase.ts e acrescendo suas credenciais.
+Adicione suas credenciais do Firebase no arquivo renomeado
 
-## Executar o app
+📲 Executar o app
+Este projeto utiliza expo-dev-client para acessar recursos nativos como câmera e notificações push.
 
-Este projeto utiliza expo-dev-client para acessar recursos nativos como câmera e notificações.
-
-### Android
-
+Android
+arduino
+Copy
+Edit
 npx expo run:android
-
-### iOS
-
+iOS
+arduino
+Copy
+Edit
 npx expo run:ios
+🔔 Notificações Push
+O app utiliza Firebase Cloud Messaging (FCM) com suporte a:
 
-## Notificações Push
+App em primeiro plano (com exibição de alerta)
 
-O app utiliza Firebase Cloud Messaging (FCM) com suporte para:
+App em segundo plano
 
-- App em primeiro plano (mensagem com alerta)
+App fechado
 
-- App em segundo plano
+O token FCM é gerado automaticamente após o login e pode ser usado para testes via Firebase Console ou API do FCM.
 
-- App fechado
-
-O token FCM é gerado automaticamente após o login e pode ser usado para testes com o Firebase Console ou API do FCM.
-
-## Fluxo do projeto
-
+🧭 Fluxo do app
 Crie uma nova conta com e-mail e senha
 
-Realize o registro de entregas
+Registre entregas com saída e chegada
 
-Envie uma imagem da entrega (foto ou galeria)
+Envie uma imagem (foto ou galeria)
 
-Acesse o histórico com as imagens
+Acesse o histórico com visualização das imagens
 
 Converse com o suporte via chat
 
-Edite seu perfil
+Edite seu perfil (nome, senha e foto)
 
-Teste notificações push com token gerado
+Teste notificações push com o token gerado
 
-## Tecnologias 
-
+🛠️ Tecnologias utilizadas
 React Native com Expo (eject com expo-dev-client)
 
-Firebase (Auth, Firestore, Storage, Messaging)
+Firebase (Authentication, Firestore, Storage, Messaging)
 
 TypeScript
 
