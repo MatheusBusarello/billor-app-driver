@@ -1,99 +1,92 @@
-BillorApp Driver
-Aplicativo mobile desenvolvido em React Native com Firebase, focado no gerenciamento de cargas, envio de comprovantes e comunicação com suporte em tempo real.
+# BillorApp Driver
 
-📱 Funcionalidades
-Autenticação por e-mail e senha (Firebase Auth)
+A mobile application developed in **React Native with Firebase**, focused on load management, proof submission, and real-time support communication.
 
-Tela inicial com:
+---
 
-Registro de saída e chegada de cargas
+## Features
 
-Histórico de entregas com imagens
+- Email and password authentication (Firebase Auth)
+- Home screen with:
+  - Load departure and arrival registration 
+  - Delivery history with images  
+- Image upload (from gallery or camera)  
+- Real-time chat with support
+- Profile with name, password, and photo editing
+- Notificações Push (Firebase Cloud Messaging)
 
-Envio de imagens (galeria ou câmera)
+---
 
-Chat em tempo real com o suporte
+## How to Run the Project
 
-Perfil com edição de nome, senha e foto
+### 1. Clone the repository
 
-Notificações Push (Firebase Cloud Messaging)
+```git clone https://github.com/seu-usuario/seu-repositorio.git cd your-repository```
 
-🚀 Como executar o projeto
-1. Clone o repositório
-bash
-Copy
-Edit
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-2. Instale as dependências
-nginx
-Copy
-Edit
-npm install
-3. Configure as variáveis de ambiente
-Crie um arquivo .env na raiz do projeto com a seguinte variável:
+### 2. Install dependencies
 
-ini
-Copy
-Edit
-GOOGLE_MAPS_API_KEY=SUA_CHAVE
-Você pode obter essa chave criando um projeto no Google Cloud Console.
+```npm install```
 
-4. Configure o Firebase
-O arquivo src/config/firebase.ts está ignorado no repositório por segurança. Para configurá-lo:
+### 3. Set environment variables
 
-Renomeie o arquivo firebase.example.ts para firebase.ts
+Create a `.env` file at the root of the project with the following variable:
 
-Adicione suas credenciais do Firebase no arquivo renomeado
+```GOOGLE_MAPS_API_KEY=YOUR_KEY```
 
-📲 Executar o app
-Este projeto utiliza expo-dev-client para acessar recursos nativos como câmera e notificações push.
+You can obtain this key by creating a project on the [Google Cloud Console](https://console.cloud.google.com/).
 
-Android
-arduino
-Copy
-Edit
-npx expo run:android
-iOS
-arduino
-Copy
-Edit
-npx expo run:ios
-🔔 Notificações Push
-O app utiliza Firebase Cloud Messaging (FCM) com suporte a:
+### 4. Configure Firebase
 
-App em primeiro plano (com exibição de alerta)
+The `src/config/firebase.ts` file is ignored in the repository for security reasons. To configure it:
 
-App em segundo plano
+- Rename the `firebase.example.ts` file to `firebase.ts`
+- Add your Firebase credentials to the renamed file.
 
-App fechado
+---
 
-O token FCM é gerado automaticamente após o login e pode ser usado para testes via Firebase Console ou API do FCM.
+## Run the app
 
-🧭 Fluxo do app
-Crie uma nova conta com e-mail e senha
+This project uses `expo-dev-client` to access native features like the camera and push notifications.
 
-Registre entregas com saída e chegada
+### Android
 
-Envie uma imagem (foto ou galeria)
+```npx expo run:android```
 
-Acesse o histórico com visualização das imagens
+### iOS
 
-Converse com o suporte via chat
+```npx expo run:ios```
 
-Edite seu perfil (nome, senha e foto)
+---
 
-Teste notificações push com o token gerado
+## Notificações Push
 
-🛠️ Tecnologias utilizadas
-React Native com Expo (eject com expo-dev-client)
+The app uses **Firebase Cloud Messaging (FCM)** with support for:
 
-Firebase (Authentication, Firestore, Storage, Messaging)
+- Foreground (with alert display))  
+- Background
+- Closed app  
 
-TypeScript
+The FCM token is automatically generated after login and can be used for testing via Firebase Console or FCM API.
 
-Styled Components
+---
 
-Gluestack UI
+## Fluxo do app
 
-React Navigation
+1. Create a new account with email and password
+2. Register deliveries with departure and arrival  
+3. Upload an image (photo or from gallery)
+4. Access the delivery history with image previews 
+5. Chat with support in real-time
+6. Edit your profile (name, password, and photo) 
+7. Test push notifications using the generated token
+
+---
+
+## Tecnologias utilizadas
+
+- React Native com Expo (eject com expo-dev-client)  
+- Firebase (Authentication, Firestore, Storage, Messaging)  
+- TypeScript  
+- Styled Components  
+- Gluestack UI  
+- React Navigation
